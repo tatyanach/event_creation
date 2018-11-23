@@ -1,4 +1,5 @@
 
+
 _users = {
     'ivan': {
         'name': 'Ivan Kapustin',
@@ -47,5 +48,7 @@ def get_users_by_name(q):
 
 def get_user(username):
     return _users.get(username)
+
+
 
 
