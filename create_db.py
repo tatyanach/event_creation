@@ -6,12 +6,14 @@ c = conn.cursor()
 c.execute('''  
 CREATE TABLE users( 
         id INTEGER PRIMARY KEY AUTOINCREMENT, 
+        login TEXT,
         name TEXT, 
         city TEXT, 
         age INTEGER,  
+        photo URL,
         preferences TEXT,
-        alcohol BOOLEAN,
-        cigarettes BOOLEAN,
+        alcohol TEXT,
+        cigarettes TEXT,
         description TEXT,
         friends INTEGER
 ) 
@@ -40,11 +42,6 @@ c.execute('''
 ''')
 conn.commit()
 
-c.execute('''
-    ALTER TABLE users
-    ADD COLUMN login TEXT
-''')
-conn.commit()
 
 c.execute('''
     UPDATE users
@@ -53,11 +50,6 @@ c.execute('''
 ''')
 conn.commit()
 
-c.execute('''
-    ALTER TABLE users
-    ADD COLUMN photo TEXT
-''')
-conn.commit()
 
 
 # Our base data
