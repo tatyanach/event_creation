@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>My Super Appplication</title>
+</head>
+<body>
+    {% if not user %}
+        <div class="alert alert-warning">User not found!</div>
+    {% endif %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <img src="{%if user.photo%}
+                {{user.photo}}
+                {%else%}
+                https://image.freepik.com/free-icon/male-user-shadow_318-34042.jpg
+                {%endif%}" class="img-thumbnail">
+            </div>
+            <div class="col-sm">
+                <h1>{{user.name}}</h1>
+                <p>Lives in {{user.city}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
