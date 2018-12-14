@@ -3,14 +3,15 @@ from flask import render_template
 from flask import request, redirect
 import db
 import sqlite3
-
 app = Flask(__name__)
+
 
 def dict_factory(cursor, row):
     d = {}
     for idx, col in enumerate(cursor.description):
         d[col[0]] = row[idx]
     return d
+
 
 @app.route('/')
 def hello_world():
@@ -43,7 +44,6 @@ def user_page(login):
     return render_template("userpage.html", user=user_data)
 
 
-
 @app.route('/add_user', methods=['GET', 'POST'])
 def add_user():
 
@@ -68,7 +68,6 @@ def add_user():
         c = conn.cursor()
         c.execute("SELECT * FROM users where login='%s'" % user['login'])
         if c.fetchone():
-            # user with this login is already in my database
             error_message = "user_exists"
         else:
             c.execute("INSERT INTO users "
@@ -90,8 +89,6 @@ def add_user():
     )
 
 
-
-
 @app.route('/search')
 def search_for_person():
     q = request.args.get('query')
@@ -99,3 +96,5 @@ def search_for_person():
     return render_template('search_results.html', q=q, users=users)
 
 app.run()
+
+

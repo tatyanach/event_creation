@@ -1,5 +1,3 @@
-
-
 _users = {
     'ivan': {
         'name': 'Ivan Kapustin',
@@ -20,7 +18,7 @@ _users = {
     },
 
     'olga': {
-        'name': 'Olga kravetz',
+        'name': 'Olga Kravetz',
         'age': '19',
         'smoking': 'Yes'
     }
@@ -28,12 +26,11 @@ _users = {
 
 _user_list = []
 
+
 for login, user_data in _users.items():
     _new_element = {'login': login}
     _new_element.update(user_data)
     _user_list.append(_new_element)
-
-
 
 
 def get_users_by_name(q):
@@ -43,7 +40,6 @@ def get_users_by_name(q):
         if q.lower() in user['name'].lower():
             results.append(user)
     return results
-
 
 
 def get_user(username):
