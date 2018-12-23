@@ -23,59 +23,59 @@ CREATE TABLE users (
 conn.commit()
 
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (1, "vasya", "Vasily", 19, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"yes", "no")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (1, "vasya", "Vasily", 19, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","yes", "no")
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (2, "dimon", "Dimitrii", 22, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"yes", "yes")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (2, "dimon", "Dimitrii", 22, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","yes", "yes")
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (3, "pumba", "Artem", 18 , https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"no", "no")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (3, "pumba", "Artem", 18 , "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","no", "no")
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (4, "losyash", "Aleksey", 19, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"yes", "yes")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (4, "losyash", "Aleksey", 19, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","yes", "yes")
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (5, "alcoholic", "Alexander", 24, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"yes", "yes")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (5, "alcoholic", "Alexander", 24, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","yes", "yes")
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (6, "nothappy", "Ruslan", 20, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"no", "no")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (6, "nothappy", "Ruslan", 20, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","no", "no")
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (7, "mr1", "Vladimir", 21, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"no", "yes")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (7, "mr1", "Vladimir", 21, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","no", "yes")
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (8, "mr2", "Oleg", 23, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"yes", "no")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (8, "mr2", "Oleg", 23, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","yes", "no")
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (9, "mr3", "Misha", 25, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"yes", "yes")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (9, "mr3", "Misha", 25, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","yes", "yes")
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (10, "mr4", "Vlad", 26, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"no", "no")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (10, "mr4", "Vlad", 26, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","no", "no")
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (11, "mr5", "Pasha", 27, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"yes", "no")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (11, "mr5", "Pasha", 27, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","yes", "no")
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (12, "mr66", "Daniil", 26, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"no", "yes")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (12, "mr66", "Daniil", 26, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","no", "yes")
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (13, "mr777", "Petr", 25, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"yes", "yes")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (13, "mr777", "Petr", 25, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","yes", "yes")
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (14, "mr88", "Andrey", 24, https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa ,"no", "no")
+INSERT INTO users (id, login, name, age, photo, alcohol, cigarettes) VALUES (14, "mr88", "Andrey", 24, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-psAclYTuPdzolkVtik5LTc2pIV2KIM__DnGIR108QNQT8GHa","no", "no")
 ''')
 conn.commit()
 c.execute('''
@@ -103,7 +103,7 @@ INSERT INTO users (id, login, name, age, alcohol, cigarettes) VALUES (20, "mrs5"
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, alcohol, cigarettes) VALUES (21, "mrs666", "Nastya", 25, ,"yes", "no")
+INSERT INTO users (id, login, name, age, alcohol, cigarettes) VALUES (21, "mrs666", "Nastya", 25 ,"yes", "no")
 ''')
 conn.commit()
 c.execute('''
@@ -127,7 +127,7 @@ INSERT INTO users (id, login, name, age, alcohol, cigarettes) VALUES (26, "mrss2
 ''')
 conn.commit()
 c.execute('''
-INSERT INTO users (id, login, name, age, alcohol, cigarettes) VALUES (27, "mrsss3", "Galya", 18,,"yes", "yes")
+INSERT INTO users (id, login, name, age, alcohol, cigarettes) VALUES (27, "mrsss3", "Galya", 18, "yes", "yes")
 ''')
 conn.commit()
 c.execute('''
@@ -411,7 +411,7 @@ CREATE TABLE event(
     e_creator INTEGER,  
     e_place TEXT, 
     e_date TEXT, 
-    e_time TEXT, 
+    e_time TEXT
    
 ) 
 ''')
@@ -790,9 +790,9 @@ events_with_friends = list(c.fetchall())
  # выбираем все мероприятия с друзьями, сортируем мероприятия,, начиная с большим количеством друзей среди участников и заканчивая мероприятием с наименьшим количеством, сохраняем в таблицу с проранжированными мероприятиями
 
 
-def get_events_by_friends:
-    results = []
-    for event in event:
-        if q.lower() in user['name'].lower():
-            results.append(event)
-    return results
+# def get_events_by_friends:
+#     results = []
+#     for event in event:
+#         if q.lower() in user['name'].lower():
+#             results.append(event)
+#     return results
