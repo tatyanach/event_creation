@@ -18,6 +18,7 @@ def dict_factory(cursor, row):
 def hello_world():
     # Connecting to DB
     conn = sqlite3.connect('app.db')
+    conn.row_factory = dict_factory
     c = conn.cursor()
 
     # Handler logic here
