@@ -1,8 +1,13 @@
 import sqlite3
 # Connect ot Database - in local file app.db
+from sqlite3.dbapi2 import Cursor
+
 conn = sqlite3.connect('app.db')
 # Create a cursor - a
-c = conn.cursor()
+c: Cursor = conn.cursor()
+
+###OUR DATA BASE FOR USERS (contain information about each user)###
+
 c.execute('''
 CREATE TABLE users (
         id INTEGER PRIMARY KEY AUTOINCREMENT, 
@@ -139,6 +144,11 @@ INSERT INTO users (id, login, name, age, alcohol, cigarettes) VALUES (30, "mrsss
 conn.commit()
 
 
+
+######################################################################################
+############################## USER FRIENDS ##########################################
+######################################################################################
+# создаем базу данных - социальный граф для пар друзей, с дублированной записью для каждого отношения
 c.execute('''
 CREATE TABLE friends (
     user1 INTEGER,
@@ -148,12 +158,6 @@ CREATE TABLE friends (
 conn.commit()
 
 
-######################################################################################
-############################## USER FRIENDS ##########################################
-######################################################################################
-# создаем базу данных - социальный граф для пар друзей, с дублированной записью для каждого отношения
-
-# Our base data for friends
 c.execute('''
 INSERT INTO friends (user1, user2) VALUES (2, 1)
 ''')
@@ -395,9 +399,10 @@ c.execute('''
 '''.format(user_id = user_id))
 
 all_friends = list(c.fetchall())
-# all_friends = [2,3]
 # выбираем список друзей определенного пользователя, сохраняем в новую переменную all_friends
 
+
+###СОЗДАЕМ НОВУЮ БАЗУ ДАННЫХ ДЛЯ МЕРОПРИЯТИЙ###
 c.execute(''' 
 CREATE TABLE event( 
     e_id INTEGER PRIMARY KEY AUTOINCREMENT, 
@@ -465,15 +470,8 @@ c.execute('''
 conn.commit()
 
 
-c.execute('''
-    UPDATE users
-    SET login="nastya"
-    WHERE name="Nastya"
-''')
-conn.commit()
 
-
-# (Many to many connection) Add users to events
+### (Many to many connection) CREATE NEW DATABASE FOR EVENTS AND PARTICIPANTS###
 c.execute('''
 CREATE TABLE users_events (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -773,15 +771,22 @@ WHERE ue.event_id=1
 conn.close()
 
 #### GET EVENTS WITH MY FRIENDS
-# all_friends = [2, 3] - we get this from DB
+# all_friends = [2, 3, 4, 10, 27] - we get this from DB
 
 
 c.execute('''
-SELECT DISTINCT(event_id) AS event_id, COUNT(*) AS users FROM users_events WHERE user_id IN 
- SELECT user2 FROM friends WHERE user1 = {user_id}
-GROUP BY event_id
+SELECT 
+DISTINCT(event_id) AS event_id, 
+COUNT(*) AS users 
+FROM users_events 
+WHERE user_id IN 
+ SELECT user2 
+ FROM friends 
+ WHERE user1 = {user_id}
+GROUP BY users
 ''')
 
+events_with_friends = list(c.fetchall())
  # выбираем все мероприятия с друзьями, сортируем мероприятия,, начиная с большим количеством друзей среди участников и заканчивая мероприятием с наименьшим количеством, сохраняем в таблицу с проранжированными мероприятиями
 
 
