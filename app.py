@@ -57,13 +57,10 @@ def add_user():
         user = {}
         user['login'] = request.form.get('login')
         user['name'] = request.form.get('name')
-        user['city'] = request.form.get('city')
         user['age'] = request.form.get('age')
         user['photo'] = request.form.get('photo')
-        user['preferences'] = request.form.get('preferences')
         user['alcohol'] = request.form.get('alcohol')
         user['cigarettes'] = request.form.get('cigarettes')
-        user['description'] = request.form.get('description')
 
         # save to database
         conn = sqlite3.connect('app.db')
@@ -75,7 +72,7 @@ def add_user():
             c.execute("INSERT INTO users "
                       "(login, name, city, age, photo, preferences, alcohol, cigarettes, description) "
                       "VALUES "
-                      "('{login}','{name}','{city}','{age}','{photo}','{preferences}','{alcohol}','{cigarettes}','{description}')"
+                      "('{login}','{name}','{age}','{photo}','{alcohol}','{cigarettes}'"
                       "".format(**user))
             conn.commit()
             user_created = True
