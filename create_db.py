@@ -395,7 +395,7 @@ conn.commit()
 user_id = 1
 c.execute('''
  SELECT user1 FROM friends WHERE user2 = {user_id}
-'''.format(user_id = user_id))
+'''.format(user_id=user_id))
 
 all_friends = list(c.fetchall())
 # выбираем список друзей определенного пользователя, сохраняем в новую переменную all_friends
@@ -787,12 +787,4 @@ GROUP BY users
 
 events_with_friends = list(c.fetchall())
  # выбираем все мероприятия с друзьями, сортируем мероприятия,, начиная с большим количеством друзей среди участников и заканчивая мероприятием с наименьшим количеством, сохраняем в таблицу с проранжированными мероприятиями
-
-
-# def get_events_by_friends:
-#     results = []
-#     for event in event:
-#         if q.lower() in user['name'].lower():
-#             results.append(event)
-#     return results
 

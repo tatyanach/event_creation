@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>My Super Appplication</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm">
+                <h1>{{event.e_name}}</h1>
+                <p>Description: {{event.e_description}}</p>
+                <p>Place: {{event.e_place}}</p>
+                <p>Date: {{event.e_date}}</p>
+                <p>Time: {{event.e_time}}</p>
+
+            </div>
+            <p>
+                 <a href="http://127.0.0.1:5000/user/<login>/" class="btn btn-danger btn-lg btn-block" role="button">Account</a>
+            </p>
+
+
+        </div>
+    </div>
+</body>
+</html>

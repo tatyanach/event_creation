@@ -6,9 +6,7 @@
     <title>My Super Appplication</title>
 </head>
 <body>
-    {% if not user %}
-        <div class="alert alert-warning">User not found!</div>
-    {% endif %}
+
     <div class="container">
         <div class="row">
             <div class="col-sm">
@@ -20,8 +18,17 @@
             </div>
             <div class="col-sm">
                 <h1>{{user.name}}</h1>
-                <p>Lives in {{user.city}}</p>
+                <p>Age {{user.age}}</p>
+                <p>Alcohol: {{user.alcohol}}</p>
+                <p>Smoking: {{user.cigarettes}}</p>
             </div>
+            <p>
+                 <a href="http://127.0.0.1:5000/create_event" class="btn btn-danger btn-lg btn-block" role="button">Create event</a>
+            </p>
+            <p>
+                 <a href="http://127.0.0.1:5000/search_event/{{user.id}}/" class="btn btn-outline-danger btn-lg btn-block" role="button">Find event</a>
+            </p>
+
         </div>
     </div>
 </body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Party</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Create your party</h1>
+
+
+        <form method="post" action="/create_event">
+            <div class="form-group">
+
+                <label>Name your event*</label>
+                <input class="form-control" type="text" name="e_name" required>
+
+                <label>Write your id*</label>
+                <input class="form-control" type="text" name="e_creator" required>
+
+                <label>Write the description of the event</label>
+                <input class="form-control" type="text" name="e_description" >
+
+                <label>Adress, where the event will take place</label>
+                <input class="form-control" type="text" name="e_place">
+
+                <label>The date of event</label>
+                <input class="form-control" type="url" name="e_date">
+
+                <label>The time of event</label>
+                <input class="form-control" type="text" name="e_time" >
+
+            </div>
+            <button type="submit" class="btn btn-success">Create event</button>
+        </form>
+    </div>
+</body>
+</html>
