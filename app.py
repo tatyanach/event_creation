@@ -1,4 +1,3 @@
-import flask as flask
 from flask import Flask
 from flask import render_template
 from flask import request, redirect
@@ -45,6 +44,28 @@ def user_page(login):
     conn.close()
     return render_template("userpage.html", user=user_data)
 
+@app.route('/entry', methods=['GET', 'POST'])
+def entry():
+    user_in_base = False
+
+    if request.method == 'POST':
+        users = {}
+        users['login'] = request.form.get('login')
+
+        conn = sqlite3.connect('app.db')
+        c = conn.cursor()
+        c.execute("SELECT * FROM users where login='%s'" % users['login'])
+        if c.fetchone():
+            user_in_base = True
+            return redirect('/user/%s/' % users['login'])
+        else:
+            user_in_base = False
+
+        return render_template("entry2.html")
+    return render_template(
+        "entry.html",
+        user_in_base=user_in_base
+    )
 
 @app.route('/add_user', methods=['GET', 'POST'])
 def add_user():
@@ -68,9 +89,10 @@ def add_user():
         c.execute("SELECT * FROM users where login='%s'" % user['login'])
         if c.fetchone():
             error_message = "user_exists"
+            return render_template("add_user2.html")
         else:
             c.execute("INSERT INTO users "
-                      "(login, name, city, age, photo, preferences, alcohol, cigarettes, description) "
+                      "(login, name, age, photo, alcohol, cigarettes) "
                       "VALUES "
                       "('{login}','{name}','{age}','{photo}','{alcohol}','{cigarettes}'"
                       "".format(**user))

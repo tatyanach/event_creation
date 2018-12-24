@@ -15,7 +15,6 @@ CREATE TABLE users (
         name TEXT, 
         age INTEGER,  
         photo URL,
-        preferences TEXT,
         alcohol TEXT,
         cigarettes TEXT
 ) 
@@ -796,3 +795,4 @@ events_with_friends = list(c.fetchall())
 #         if q.lower() in user['name'].lower():
 #             results.append(event)
 #     return results
+

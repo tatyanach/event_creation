@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Enroll</title>
+</head>
+<body>
+        <div class="alert alert-danger">User with this login does not exist</div>
+    <div class="container">
+        <h1>Entry through your account!</h1>
+
+        <form method="post" action="/entry">
+            <div class="form-group">
+
+                <label>Login*</label>
+                <input class="form-control" type="text" name="login" required>
+
+
+            </div>
+            <button type="submit" class="btn btn-success">Sigh in</button>
+        </form>
+    </div>
+        <div>
+            <p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                <a href="http://127.0.0.1:5000/add_user" class="btn btn-danger" role="button">Sign up</a>
+            <p>
+        </div>
+</body>
