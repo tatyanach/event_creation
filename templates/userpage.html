@@ -23,11 +23,12 @@
                 <p>Smoking: {{user.cigarettes}}</p>
             </div>
             <p>
-                 <a href="http://127.0.0.1:5000/create_event" class="btn btn-danger btn-lg btn-block" role="button">Create event</a>
+                 <a href="/create_event" class="btn btn-danger btn-lg btn-block" role="button">Create event</a>
             </p>
-            <p>
-                 <a href="http://127.0.0.1:5000/search_event/{{user.id}}/" class="btn btn-outline-danger btn-lg btn-block" role="button">Find event</a>
-            </p>
+
+            <form class="form" method="get" action="/events">
+            <button type="submit" class="btn btn-danger btn-lg btn-block">Find events</button>
+            </form>
 
         </div>
     </div>

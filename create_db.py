@@ -473,7 +473,7 @@ conn.commit()
 ### (Many to many connection) CREATE NEW DATABASE FOR EVENTS AND PARTICIPANTS###
 c.execute('''
 CREATE TABLE users_events (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        id_ue INTEGER PRIMARY KEY AUTOINCREMENT,
         user_id INTEGER,
         event_id INTEGER,
         FOREIGN KEY (user_id) REFERENCES users(id),

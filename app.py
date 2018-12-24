@@ -187,6 +187,18 @@ def search_for_event(id):
     conn.close()
     return render_template("search_event", event=results)
 
+@app.route('/events')
+def show_events():
+    conn = sqlite3.connect('app.db')
+    conn.row_factory = dict_factory
+    c = conn.cursor()
+    c.execute('''
+    SELECT * FROM event
+    ''')
+    event_data = c.fetchall()
+    conn.close()
+    return render_template('events_results.html', event=event_data)
+
 @app.route('/search')
 def search_for_person():
     q = request.args.get('query')
