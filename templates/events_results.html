@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of all events</title>
+    <style>
+        body{
+            background: url("https://pp.userapi.com/c851432/v851432469/75da5/eM0gBBoZhWs.jpg") no-repeat;
+            backround-size: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="starter-template">
+        <h1>Choose the event</h1>
+
+    </div>
+
+    <div class="container">
+        <h3>Events: </h3>
+        {% for event in event %}
+            <span class="label label-default">
+                <a href="/event/{{event.e_name}}/">{{event.e_name}}</a>
+            </span>
+            <br />
+        {% endfor%}
+        <hr>
+        <a href="/create_event">Create new event</a>
+        <a href="/search_event/<id>/">Go to events with friends</a>
+    </div>
+
+    <div class="container">
+
+        <form class="form" method="get" action="/events">
+
+        </form>
+
+
+</body>
+</html>
